@@ -5,7 +5,6 @@ class Person{
         this.age = 0;
     } 
 } 
-
 class Student{
     constructor(firstName,lastName,age){
         this.firstName = firstName;
@@ -13,7 +12,6 @@ class Student{
         this.age = age;
     }  
 } 
-
 const person1 = new Person()
 person1.firstName ="Lembit";
 person1.lastName = "Juur";
@@ -26,10 +24,8 @@ const person3 = new Person()
 person3.firstName ="Vello";
 person3.lastName = "Juur";
 person3.age = 43;
-
 const student1 = new Student("Lembit","Juur", 23)
 const student2 = new Student("Lauri","Juur", 24)
 const student3 = new Student("Leo","Juur", 26)
-
 console.log(person1)
 console.log(student1)
