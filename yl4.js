@@ -18,7 +18,7 @@ class Circle extends Shape {
         this.radius = radius;
     }
     getArea() {
-        return  Math.PI * this.radius * this.radius;
+        return Math.PI * this.radius * this.radius;
     }
     print() {
         console.log("r:" + this.getArea() + " color: " + this.color)
@@ -50,32 +50,46 @@ class Rectangle extends Shape {
     }
 }
 class Paint {
-    constructor(){
-       this.allShapes =[]; 
-    } 
-    addShape(shape){
+    constructor() {
+        this.allShapes = [];
+    }
+    addShape(shape) {
         this.allShapes.push(shape);
-    } 
-    getShape(){
+    }
+    getShape() {
         return this.allShapes;
-    }  
-    calculateTotalArea(){
+    }
+    calculateTotalArea() {
         let calculatedArea = 0;
         this.allShapes.forEach(shape => {
             calculatedArea += shape.getArea();
 
         });
         return calculatedArea;
-    } 
-} 
-const circle = new Circle("Brown", 3);
+    }
+
+    getCircles() {
+        let allCircles = [];
+        this.allShapes.forEach(shape => {
+            if ( shape instanceof (Circle)) {
+                allCircles.push(shape)
+            }
+        })
+        return allCircles;
+    }
+}
+const circle0 = new Circle("Brown", 3);
+const circle1 = new Circle("Blue", 5);
 const square = new Square("red", 5);
 const rectangle = new Rectangle("blue", 5, 5);
 // square.print();
 const paint = new Paint();
 paint.addShape(square);
 paint.addShape(rectangle);
-paint.addShape(circle);
+paint.addShape(circle0);
+paint.addShape(circle1);
 console.log(paint.calculateTotalArea())
 paint.calculateTotalArea()
 console.log(paint.getShape());
+console.log(paint.getCircles());
+
