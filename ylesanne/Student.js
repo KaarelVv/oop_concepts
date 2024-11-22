@@ -3,18 +3,16 @@ const Person = require('./Person')
 
 class Student extends Person {
     constructor(name) {
-        super(name);
+        super(name)
+        this.name = name;
         this.id = null;
         this.grades = [];
     }
 
     setId(id) {
-
-        grades.forEach(element => {
-            if (element != id) {
-                this.id = id;
-            }
-        });
+        if(this.id === null ){
+            this.id = id;
+        }  
 
     }
 
@@ -23,12 +21,11 @@ class Student extends Person {
     }
 
     getGrades() {
-        if (grade.isEmpty()) {
-            return -1;
-        } else {
-            return this.grades;
-        }
+        return this.grades;
     }
+    addGrade(grade){
+        this.grade.push(grade);
+    } 
 
     getAverageGrade() {
         if (this.getGrades == -1) {
@@ -49,5 +46,7 @@ class Student extends Person {
         return toString(Person);
     }
 } 
+
+
 
 module.exports = Student;

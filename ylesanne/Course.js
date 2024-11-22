@@ -2,12 +2,17 @@ const Student = require("./Student")
 
 class Course extends Student{
     constructor(name){
+        super(name);
         this.name = name;
-        super(grades);
+        
     } 
 
+
+    addCourse(name){
+        this.name = name;
+    } 
     getGrades(){
-        return Student.getGrades();
+        return ;
     }  
 
     getAverageGrade(){
@@ -24,4 +29,6 @@ class Course extends Student{
     } 
 } 
 
-module.exports = Student;
+
+
+module.exports = Course;
