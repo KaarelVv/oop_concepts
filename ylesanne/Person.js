@@ -26,9 +26,6 @@ class Person{
     } 
 } 
 
-const person1 = new Person("Lembit")
-person1.setDateOfBirth(1990);
 
-console.log(person1.age())
 
-module.export = Person;
+module.exports = Person;

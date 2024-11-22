@@ -1,4 +1,4 @@
-import {Student} from "./Student" 
+const Student = require("./Student") 
 
 class Course extends Student{
     constructor(name){
@@ -24,4 +24,4 @@ class Course extends Student{
     } 
 } 
 
-module.export = Student;
+module.exports = Student;

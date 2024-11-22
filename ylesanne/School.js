@@ -1,11 +1,24 @@
+const Course = require("./Course") 
+
 class School extends Course{
     constructor(name){
-        this.name = name;
-        students = Student.call(getName());
-        courses = Course.call(getName());
+        super(name)
+        
         
     } 
     addCourse(course){
+        
+    } 
+
+    addStudent(student){
+
+    } 
+
+    addStudentGrade(student, course, grade) {
+
+    } 
+
+    getStudents(){
         
     } 
 
@@ -13,4 +26,4 @@ class School extends Course{
 
 } 
 
-module.export = School;
+module.exports = School;

@@ -1,11 +1,11 @@
-
+const Person = require('./Person')
 
 
 class Student extends Person {
     constructor(name) {
         super(name);
-        id = null;
-        grades = [];
+        this.id = null;
+        this.grades = [];
     }
 
     setId(id) {
@@ -50,4 +50,4 @@ class Student extends Person {
     }
 } 
 
-module.export = Student;
+module.exports = Student;
