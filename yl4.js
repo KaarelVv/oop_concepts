@@ -77,6 +77,15 @@ class Paint {
         })
         return allCircles;
     }
+    getSquare() {
+        let allSquares = [];
+        this.allShapes.forEach(shape => {
+            if ( shape instanceof (Square)) {
+                allSquares.push(shape)
+            }
+        })
+        return allCircles;
+    }
 }
 const circle0 = new Circle("Brown", 3);
 const circle1 = new Circle("Blue", 5);
